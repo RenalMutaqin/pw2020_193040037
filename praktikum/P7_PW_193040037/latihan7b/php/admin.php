@@ -1,67 +1,45 @@
 <?php
+// menghubungkan dengan file php lainnya
 require 'functions.php';
 
+// melalukan query
+$alat_musik = query("SELECT * FROM makanan ORDER BY makanan ASC");
+
 if (isset($_GET['cari'])) {
-  $keywords = $_GET['keyword'];
-  $makanan = query("SELECT * FROM makanan WHERE
-  Nama_Makanan LIKE '%$keywords%' OR
+  $keyword = $_GET['keyword'];
+  $alat_musik = query(
+    "SELECT * FROM  makanan WHERE
+        Nama_Makanan LIKE '%$keywords%' OR
   Asal_Makanan LIKE '%$keyword%' OR
   Bahan_Makanan LIKE '%$keyword%' OR
   Jenis LIKE '%$keyword%' OR
-   Harga LIKE '%$keyword%' ");
+   Harga LIKE '%$keyword%'
+        "
+  );
 } else {
-
-
   $makanan = query("SELECT * FROM makanan");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>latihan6d_193040037</title>
-
-  <style>
-    table {
-      background: lightseagreen;
-    }
-
-    img {
-      width: 100px;
-      height: 100px;
-      border: 2px lightseagreen;
-    }
-
-    th {
-      background: lightseagreen;
-    }
-
-    button {
-      background: pink;
-      color: black;
-      font-size: medium;
-    }
-  </style>
-
+  <link rel="stylesheet" href="../css/admin.css">
+  <title>Admin</title>
 </head>
 
 <body>
   <div class="add">
     <a href="tambah.php"><button>Tambah Data</button></a>
-    <br></br>
-    <br>
-
-    <form action="" method="POST">
-      <input type="text" name="keyword" size="40" placeholder="masukan keyword pencarian.." autocomplete="off" autofocus>
-      <button type="submit" name="cari">Cari!</button>
-    </form>
-    <br>
-  </div>
+  </div><br>
+  <form action="" method="GET">
+    <input type="text" name="keyword" autofocus>
+    <button type="submit" name="cari">Cari!</button>
+  </form><br>
   <table border="1" cellpadding="13" cellspacing="0">
-    <tr>
+    <tr class="fieldname">
       <th>#</th>
       <th>Opsi</th>
       <th>Gambar</th>
@@ -74,33 +52,32 @@ if (isset($_GET['cari'])) {
     <?php if (empty($makanan)) : ?>
       <tr>
         <td colspan="7">
-          <h1>Data Tidak Ditemukan</h1>
+          <h1>Data tidak ditemukan</h1>
         </td>
       </tr>
     <?php else : ?>
-
       <?php $i = 1; ?>
-      <?php foreach ($makanan as $m) : ?>
+      <?php foreach ($makanan as $mm) : ?>
         <tr>
-          <td><?= $i++; ?></td>
+          <td><?= $i; ?></td>
           <td>
-            <a href="ubah.php?id= <?= $m['id'] ?>"><button>Ubah</button></a>
-            <a href="hapus.php?id=<?= $m['id']; ?>" onclick="return confirm('Hapus Data??')"><button>Hapus</button></a>
+            <a href="ubah.php?id=<?= $am['id'] ?>" class="ubah"><button>Ubah</button></a>
+            <a href="hapus.php?id=<?= $am['id'] ?>" onclick="return confirm('Apakah anda yakin ingin Menghapus Data ???')" class="hapus"><button>Hapus</button></a>
           </td>
-          <td><img src="../assets/img/<?= $m['Gambar']; ?>"></td>
+          <td><img src="../assets/img/<?= $m['Gambar']; ?>" alt=""></td>
           <td><?= $m['Nama_Makanan']; ?></td>
           <td><?= $m['Asal_Makanan']; ?></td>
           <td><?= $m['Bahan_Makanan']; ?></td>
           <td><?= $m['Jenis']; ?></td>
-          <td><?= $m['Harga']; ?></td>
+          <td>Rp <?= $m['Harga']; ?></td>
         </tr>
         <?php $i++; ?>
       <?php endforeach; ?>
     <?php endif; ?>
-    <div class="logout">
-      <a href="logout.php"><button>Logout</button></a>
-    </div>
   </table>
+  <div class="logout">
+    <a href="logout.php">Logout</a>
+  </div>
 </body>
 
 </html>

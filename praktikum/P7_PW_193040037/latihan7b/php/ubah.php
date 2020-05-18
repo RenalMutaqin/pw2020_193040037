@@ -1,34 +1,33 @@
 <?php
-require 'functions.php';
-$id = $_GET['id'];
-$mhs = query("SELECT * FROM makanan WHERE id = $id")[0];
 
-//cek apakah tombol sudah dipencet
+require 'functions.php';
+
+$id = $_GET['id'];
+$am = query("SELECT * FROM alat_musik WHERE id =  $id")[0];
+
 if (isset($_POST['ubah'])) {
-  if (tambah($_POST) > 0) {
+  if (ubah($_POST) > 0) {
     echo "<script>
-alert('Data berhasil diubah');
-document.location.href = 'admin.php';
-   </script>";
+                alert('Data Berhasi Diubah!');
+                document.location.href = 'admin.php';
+          </script>";
   } else {
-    echo "Data gagal diubah";
+    echo "<script>
+                alert('Data Gagal Diubah!');
+                document.location.href = 'admin.php';
+          </script>";
   }
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ubah Data Makanan</title>
-  <style>
-    button {
-      background: silver;
-      color: black;
-      font-size: medium;
-    }
-  </style>
+  <title>Ubah Data</title>
 </head>
 
 <body>
@@ -104,6 +103,9 @@ document.location.href = 'admin.php';
       </tr>
     </form>
   </table>
+</body>
+</ul>
+
 </body>
 
 </html>

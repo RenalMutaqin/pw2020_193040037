@@ -1,0 +1,49 @@
+h1{
+  color: black;
+  border: 2px solid rgb(13, 13, 14);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+  width: 490px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+form{
+  width: 500px;
+  margin: auto;
+  border: 2px solid black;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 14px 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid rgb(129, 129, 129);
+  box-sizing: border-box;
+}
+
+label {
+  color: black;
+  text-transform: uppercase;
+}
+
+button {
+  background-color: black;
+  color: whitesmoke;
+  width: 100%;
+  padding: 14px 10px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.container {
+  padding: 16px;
+}
+

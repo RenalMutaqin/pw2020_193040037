@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Bulan Mei 2020 pada 23.47
+-- Waktu pembuatan: 18 Bulan Mei 2020 pada 05.17
 -- Versi server: 10.4.8-MariaDB
 -- Versi PHP: 7.1.33
 
@@ -40,7 +40,15 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (1, 'admin', 'admin'),
-(2, 'user', '$2y$10$F1sQOV3H/Z3UU');
+(2, 'user', '$2y$10$F1sQOV3H/Z3UU'),
+(3, 'username', '$2y$10$VmABp3gYx/YZ6'),
+(5, 'register', '$2y$10$L8/qqdIP.Ah.p'),
+(6, 'nama', '$2y$10$emUo0MMp/XFsu'),
+(7, 'banana', '$2y$10$InBnegppsjxvI'),
+(8, 'mawang', '$2y$10$Lpv3/PudpeXvU'),
+(9, 'php', '$2y$10$x35TC0uVHtfDe'),
+(10, 'disini', '$2y$10$u1iYHNRnkxx/n'),
+(11, '', '$2y$10$A9nSnVjbJkL8z');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +68,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

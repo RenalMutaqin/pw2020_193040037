@@ -1,89 +1,87 @@
 <?php
-
 // menghubungkan dengan file php lainnya
 require 'php/functions.php';
-// melakukan query
-$makanan = query("SELECT * FROM makanan");
-?>
 
+// melakukan querry
+$makanan = query("SELECT * FROM makanan")
+?>
+<?php if (isset($_POST['cari'])) {
+    $keyword = $_POST['keyword'];
+    $makanan = query(
+        "SELECT * FROM Nama_Makanan WHERE
+          Nama_Makanan LIKE '%$keyword%' "
+    );
+} else {
+    $makanan = query("SELECT * FROM makanan");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>latihan6a_193040012</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            min-height: 500px;
+            font-family: arial;
+            background-image: url(assets/img/kopi.jpeg);
+            background-repeat: no-repeat;
+        }
 
-  <style>
-    .container {
-      border: 4px solid black;
+        .container {
+            width: 40%;
+            margin: 100px auto 150px;
+            text-align: center;
+        }
 
-      background-color: lightblue;
+        h1 {
+            color: yellow;
+            margin: 2 auto;
+        }
 
-      width: 300px;
-      height: 300px;
-      margin: auto;
-      padding: 30px 0 20px 20px;
-      font-family: arial;
-      font-size: x-large;
-    }
+        .container p a {
+            background-color: lightblue;
+            color: red;
+            font-size: 25px;
+            text-decoration: none;
+            padding: auto;
+        }
 
-    a:link {
-      color: black;
-
-    }
-
-    a:hover {
-      text-decoration: none;
-      color: white;
-
-    }
-
-    a:active {
-      text-decoration: none;
-    }
-  </style>
-
+        .container p a:hover {
+            color: yellow;
+            font-size: 26px;
+            background-color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6a</title>
 </head>
 
 <body>
-  <h1>
-    <center>DAFTAR MAKANAN</center>
-  </h1>
+    <form action="" method="POST">
+        <input type="text" name="keyword" size="25" autofocus placeholder="Masukan keyword yang anda cari" autocomplete="off">
+        <button type="submit" name="cari">Cari!</button><br><br>
+    </form>
+    <a href="php/login.php">
+        <button type="">Masuk ke halaman Admin</button>
+    </a>
+    <div class="container">
+        <h1>Makanan</h1>
+        <?php if (empty($makanan)) : ?>
+            <h1>Data tidak ditemukan</h1>
+        <?php else : ?>
+            <?php foreach ($makanan as $m) : ?>
+                <p>
+                    <a href="php/detail.php?id=<?= $m['id'] ?>">
+                        <?= $m['Nama_Makanan'] ?>
+                    </a>
+                </p>
 
-  <form action="" method="POST">
-    <center><input type="text" name="keyword" size="20" placeholder="masukan pencarian.." autocomplete="off" autofocus>
-      <button type="submit" name="cari">Cari!</button></center>
-  </form>
-
-  <br>
-
-  <div class="container">
-
-    <?php if (empty($makanan)) : ?>
-      <tr>
-        <td colspan="4">
-          <h1 style="color: red; font-style: italic; font-size: large;">Data tidak ditemukan</h1>
-        </td>
-      </tr>
-    <?php endif; ?>
-
-
-
-
-    <?php foreach ($makanan as $mkn) : ?>
-      <div class="Nama_Makanan">
-        <a href="php/detail.php?id=<?= $mkn['id']; ?>">
-          <?= $mkn["Nama_Makanan"]; ?>
-        </a>
-      </div>
-    <?php endforeach; ?>
-  </div>
-  <h1>
-    <center>MAKAN BANG!</center>
-  </h1>
-
-  <a href="php/login.php"><button>Masuk ke halaman admin</button></a>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
 </body>
 
 </html>
