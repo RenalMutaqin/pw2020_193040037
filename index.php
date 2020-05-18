@@ -15,29 +15,29 @@
 <body>
   <link rel="stylesheet" href="index.css">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">193040037</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="../PW2020_193040037/tubes/Tubes_193040037">TUBES<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../tubes/Tubes_193040037">TUBES<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             KULIAH
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan9">Pertemuan 9</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan10">Pertemuan 10</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan10/latihan1.php">Latihan1</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan10/latihan2.php">Latihan2</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan10/latihan3.php">Latihan3</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan10/tambah.php">Tambah Data</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan11">Pertemuan 11</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan12">Pertemuan 12</a>
-            <a class="dropdown-item" href="../PW2020_193040037/kuliah/pertemuan13">Pertemuan 13</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan9">Pertemuan 9</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan10">Pertemuan 10</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan10/latihan1.php">Latihan1</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan10/latihan2.php">Latihan2</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan10/latihan3.php">Latihan3</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan10/tambah.php">Tambah Data</a>
+            <a class="dropdown-item" href="../pertemuan11">Pertemuan 11</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan12">Pertemuan 12</a>
+            <a class="dropdown-item" href="../kuliah/pertemuan13">Pertemuan 13</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -45,21 +45,21 @@
             PRAKTIKUM
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P5_PW_193040037">P5_PW_193040037</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P5_PW_193040037/latihan5a">Latihan5a</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P5_PW_193040037/latihan5b">Latihan5b</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P5_PW_193040037/latihan5c">Latihan5c</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037">P6_PW_193040037</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037/latihan6a">Latihan6a</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037/latihan6b">Latihan6b</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037/latihan6c">Latihan6c</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037/latihan6d">Latihan6d</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037/latihan6e">Latihan6e</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P6_PW_193040037/tugas">Tugas</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P7_PW_193040037">P7_PW_193040037</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P7_PW_193040037/latihan7a">Latihan 7a</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P7_PW_193040037/latihan7b">Latihan 7b</a>
-            <a class="dropdown-item" href="../PW2020_193040037/praktikum/P7_PW_193040037/latihan7c">Latihan 7c</a>
+            <a class="dropdown-item" href="../praktikum/P5_PW_193040037">P5_PW_193040037</a>
+            <a class="dropdown-item" href="../praktikum/P5_PW_193040037/latihan5a">Latihan5a</a>
+            <a class="dropdown-item" href="../praktikum/P5_PW_193040037/latihan5b">Latihan5b</a>
+            <a class="dropdown-item" href="../praktikum/P5_PW_193040037/latihan5c">Latihan5c</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037">P6_PW_193040037</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037/latihan6a">Latihan6a</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037/latihan6b">Latihan6b</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037/latihan6c">Latihan6c</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037/latihan6d">Latihan6d</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037/latihan6e">Latihan6e</a>
+            <a class="dropdown-item" href="../praktikum/P6_PW_193040037/tugas">Tugas</a>
+            <a class="dropdown-item" href="../praktikum/P7_PW_193040037">P7_PW_193040037</a>
+            <a class="dropdown-item" href="../praktikum/P7_PW_193040037/latihan7a">Latihan 7a</a>
+            <a class="dropdown-item" href="../praktikum/P7_PW_193040037/latihan7b">Latihan 7b</a>
+            <a class="dropdown-item" href="../praktikum/P7_PW_193040037/latihan7c">Latihan 7c</a>
           </div>
         </li>
       </ul>
